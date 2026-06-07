@@ -1,0 +1,51 @@
+:root {
+  /* Brand Colors */
+  --primary-bg-color: #1d6f3a;
+  --primary-bg-hover: #185c30;
+  --primary-color: #f2f8f1;
+  --secondary-bg-color: #a7d5a0;
+  --secondary-bg-hover: #8bbe82;
+  --secondary-color: #1e4425;
+  --secondary-accent-color: #ec856f;
+  --accent-color: #ec856f;
+  --accent-bg: rgba(236, 133, 111, 0.18);
+  
+  /* Neutrals */
+  --bg-color: #e6f0e7;
+  --card-bg: rgba(248, 251, 245, 0.88);
+  --text-color: #081c0c;
+  --text-muted: #4f6e57;
+  --border-color: rgba(201, 227, 205, 0.8);
+  
+  /* Design Tokens */
+  --card-shadow: 0 20px 45px rgba(24, 77, 32, 0.12);
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --transition: 0.22s ease;
+
+  /* Squares */
+  --square-size: 150px;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top left, rgba(68, 150, 89, 0.16), transparent 28%),
+              linear-gradient(180deg, #eef5eb 0%, #dfe9df 100%);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+<component view-model="ProductoRow">
+  <div class="container" bind-class="claseSeleccion">
+    <div class="imagen">
+      <img bind-src="producto.imagen" bind-alt="producto.descripcion" />
+    </div>
+    <div class="info">
+      <p class="principal" bind-content="producto.descripcion"></p>
+      <p class="secundario" bind-content="entrega"></p>
+    </div>
+    <div class="precio">
+      <p class="precio" bind-content="precio"></p>
+    </div>
+  </div>
+</component>

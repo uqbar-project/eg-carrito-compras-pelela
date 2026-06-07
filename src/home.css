@@ -1,0 +1,89 @@
+.card {
+  background: var(--card-bg);
+  padding: 2.4rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  min-width: min(92vw, 760px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(22px);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+input {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  background: #f7faf5;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-bg-color);
+  box-shadow: 0 0 0 4px rgba(29, 111, 58, 0.08);
+}
+
+button {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: calc(var(--radius-md) * 1.1);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition), transform 0.12s ease;
+}
+
+button:hover {
+  background-color: var(--primary-bg-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.selected,
+.selected {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(217, 107, 92, 0.24);
+}
+
+.secondary {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-color);
+  height: fit-content;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(29, 111, 58, 0.16);
+}
+
+.secondary:hover {
+  background-color: var(--secondary-bg-hover);
+}

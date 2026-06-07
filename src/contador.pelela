@@ -1,0 +1,7 @@
+<component view-model="Contador">
+  <div class="box">
+    <button class="secondary" click="restar">-</button>
+    <span bind-content="valor"></span>
+    <button class="primary" click="sumar">+</button>
+  </div>
+</component>

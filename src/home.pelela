@@ -1,0 +1,13 @@
+<div class="card">
+  <h1>Carrito de compras</h1>
+
+  <pelela view-model="Home">
+    <div for-each="producto of productos" index="indiceActual">
+      <producto-row prop-producto="producto" prop-indice-actual="indiceActual" prop-indice="indice"></producto-row>
+    </div>
+    <contador link-valor="indice" prop-desde="desde" prop-hasta="cantidadProductos"></contador>
+    <hr/>
+    <h2>Contador independiente</h2>
+    <contador prop-valor="otroIndice"></contador>
+  </pelela>
+</div>

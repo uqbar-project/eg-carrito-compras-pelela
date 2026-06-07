@@ -1,0 +1,46 @@
+/* Styles for Contador component */
+.box {
+  width: 100%;
+  margin: 1.2em 0;
+  padding: 0.9em 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.85rem;
+  height: 4em;
+}
+
+.box button {
+  height: 3em;
+  width: 3em;
+  padding: 0.5em;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 8px 18px rgba(21, 89, 37, 0.12);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.box button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+button.primary {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+button.secondary {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-color);
+}
+
+span {
+  line-height: 3em;
+  min-width: 3.5em;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
