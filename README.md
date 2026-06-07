@@ -1,9 +1,8 @@
-# ▪️ Cuadrados Pelela
+# 🛍️ Carrito de compras en Pelela
 
 [![CI](https://github.com/uqbar-project/eg-carrito-compras-pelela/actions/workflows/ci.yml/badge.svg)](https://github.com/uqbar-project/eg-carrito-compras-pelela/actions/workflows/ci.yml)
 
 ## 🚀 Cómo ejecutarlo
-
 
 Como de costumbre
 
