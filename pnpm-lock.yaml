@@ -12,8 +12,8 @@ importers:
         specifier: ^4.4.0
         version: 4.4.0
       pelelajs:
-        specifier: latest
-        version: 0.6.8
+        specifier: 0.7.0
+        version: 0.7.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.3.8
@@ -408,6 +408,9 @@ packages:
   deffy@2.2.5:
     resolution: {integrity: sha512-6TX2cfIo97eKqWmqgMDAUulCwnveAe3K+4VGsTGPJsL3NtSEnSBFZ3sUXdS4EBhZ8GbdaZBzXQ04ton18dJrug==}
 
+  devalue@5.8.1:
+    resolution: {integrity: sha512-4CXDYRBGqN+57wVJkuXBYmpAVUSg3L6JAQa/DFqm238G73E1wuyc/JhGQJzN7vUf/CMphYau2zXbfWzDR5aTEw==}
+
   esbuild@0.27.7:
     resolution: {integrity: sha512-IxpibTjyVnmrIQo5aqNpCgoACA/dTKLTlhMHihVHhdkxKyPO1uBBthumT0rdHmcsk9uMonIWS0m4FljWzILh3w==}
     engines: {node: '>=18'}
@@ -451,8 +454,8 @@ packages:
     resolution: {integrity: sha512-CwYO/i9F4kBJ/C69zcjVkayuc17QZNPvFpzpoicXhRdnBaB9Q/I1eXWst7+kvzzzwJgDmLp26R2aOsGQctZkPg==}
     hasBin: true
 
-  pelelajs@0.6.8:
-    resolution: {integrity: sha512-sDOpcM7MhsI2Hu6CrtTWURZ85YrursyNps9sQevL2vuZTm4H7GMN7lCdt7b/vSWwsDj3YlB2NBn8h9/v0aDE1Q==}
+  pelelajs@0.7.0:
+    resolution: {integrity: sha512-fY3AGvT1F/WctLIaD46JB8Qssyq3k4UHYpujKOJliM6PFBRBX4u87sqFHThIWVGUZjOLHOdTVtn8t8f073VypQ==}
     hasBin: true
 
   picocolors@1.1.1:
@@ -749,6 +752,8 @@ snapshots:
     dependencies:
       typpy: 2.4.0
 
+  devalue@5.8.1: {}
+
   esbuild@0.27.7:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.27.7
@@ -808,11 +813,12 @@ snapshots:
       commander: 12.1.0
       i18next: 23.16.8
 
-  pelelajs@0.6.8:
+  pelelajs@0.7.0:
     dependencies:
       chalk: 5.6.2
       cli-box: 6.0.11
       commander: 12.1.0
+      devalue: 5.8.1
       i18next: 23.16.8
 
   picocolors@1.1.1: {}
