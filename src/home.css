@@ -87,3 +87,102 @@ button.selected,
 .secondary:hover {
   background-color: var(--secondary-bg-hover);
 }
+
+/* TODO: eliminarlo, está duplicado en producto-row.css  */
+.container {
+  font-size: 12px;
+  margin: 1em;
+  width: 100%;
+  min-height: 6rem;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 6fr 2fr;
+  grid-template-areas: "imagen info precio";
+  gap: 1em;
+  align-items: center;
+}
+
+.imagen {
+  justify-self: center;
+}
+
+.imagen img {
+  height: auto;
+  width: 7em;
+}
+
+p {
+  margin: 0.2em;
+}
+
+
+.principal {
+  font-size: 1.5em;
+}
+
+
+.secundario {
+  color: rgb(44, 44, 44);
+}
+
+
+.precio {
+  font-size: 1.3em;
+  font-weight: bold;
+} 
+
+.elegido {
+  margin: 0.5em 1.5em 0.5em 0.5em;
+  padding: 1em 0;
+  background-color: var(--secondary-accent-color);
+  border-radius: 0.8rem;
+}
+
+/* TODO: Eliminarlo, está duplicado con contador.css */
+/* Styles for Contador component */
+.box {
+  width: 100%;
+  margin: 1.2em 0;
+  padding: 0.9em 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 0.85rem;
+  height: 4em;
+}
+
+.box button {
+  height: 3em;
+  width: 3em;
+  padding: 0.5em;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 8px 18px rgba(21, 89, 37, 0.12);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.box button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+button.primary {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+button.secondary {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-color);
+}
+
+span {
+  line-height: 3em;
+  min-width: 3.5em;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
