@@ -5,7 +5,7 @@
     <div for-each="producto of productos" index="indiceActual">
       <producto-row prop-producto="producto" prop-indice-actual="indiceActual" prop-indice="indice"></producto-row>
     </div>
-    <contador link-valor="indice" prop-desde="desde" prop-hasta="cantidadProductos"></contador>
+    <contador link-valor="indice" const-desde="1" prop-hasta="cantidadProductos"></contador>
     <hr/>
     <h2>Contador independiente</h2>
     <contador prop-valor="otroIndice"></contador>

@@ -1,4 +1,5 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - pelelajs@0.7.0
+  - pelelajs@1.0.1
+  - vite-plugin-pelelajs@1.0.1

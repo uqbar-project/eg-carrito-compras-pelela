@@ -1,7 +1,7 @@
 <component view-model="ProductoRow">
   <div class="container" bind-class="claseSeleccion">
     <div class="imagen">
-      <img bind-src="producto.imagen" alt="Imagen del producto" />
+      <img bind-src="producto.imagen" bind-alt="producto.descripcion" />
     </div>
     <div class="info">
       <p class="principal" bind-content="producto.descripcion"></p>
