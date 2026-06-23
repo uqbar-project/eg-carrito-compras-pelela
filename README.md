@@ -38,7 +38,7 @@ A su vez, el carrito de compras tiene
 
 ![carrito de compras](./images/carrito.png)
 
-## 🧃 Producto
+## 🧃 Componente Producto
 
 ```html
 <div for-each="producto of productos" index="indiceActual">
@@ -55,7 +55,19 @@ Los productos salen de una lista (para este ejemplo hardcodeada). Por otra parte
 En este caso usamos
 
 - camel case para definir la clase view model: ProductoRow
-- kebab case para los archivos: `producto-row.ts`, `producto-row.pelela`, `producto-row.css` y para utilizarlo dentro de nuestro archivo pelela: `<producto-row>` abriendo y cerrando los tags para formar un HTML 5.0 válido
+- kebab case para los archivos: `producto-row.ts`, `producto-row.pelela`, `producto-row.css` y para utilizarlo dentro de nuestro archivo pelela: `<producto-row>` abriendo y cerrando los tags para formar un HTML 5.0 válido.
+
+Para crear un componente tenés una instrucción específica del CLI:
+
+```bash
+pelela new --component NombreDelComponente
+# o...
+pelela new -c NombreDelComponente
+# ...sin css
+pelela new -c NombreDelComponente --no-css
+```
+
+El nombre del componente sigue la convención camel case, en caso de duda: `pelela new --help` o `pelela new -h`.
 
 ### Parámetros del componente
 
