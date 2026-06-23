@@ -38,7 +38,7 @@ A su vez, el carrito de compras tiene
 
 ![carrito de compras](./images/carrito.png)
 
-## ☑️ Producto seleccionado
+## 🧃 Producto
 
 ```html
 <div for-each="producto of productos" index="indiceActual">
@@ -46,7 +46,20 @@ A su vez, el carrito de compras tiene
 </div>
 ```
 
-Los productos salen de una lista (para este ejemplo hardcodeada). Por otra parte, queremos que cada fila de un producto se delegue en otro componente, para lo cual le pasamos el producto, el índice y si es el producto seleccionado (`indiceActual`), que sale de la propiedad `index` del `for-each`. Todas esas propiedades se pasan mediante la definición
+Los productos salen de una lista (para este ejemplo hardcodeada). Por otra parte, queremos que cada fila de un producto se delegue en otro componente, que será **otra tríada**:
+
+- un archivo .pelela que debe tener como elemento raíz el tag `component` (no puede tener otro elemento padre)
+- un archivo .ts que representa el view model
+- y opcionalmente un archivo .css que **funciona de manera aislada del resto de los componentes**
+
+En este caso usamos
+
+- camel case para definir la clase view model: ProductoRow
+- kebab case para los archivos: `producto-row.ts`, `producto-row.pelela`, `producto-row.css` y para utilizarlo dentro de nuestro archivo pelela: `<producto-row>` abriendo y cerrando los tags para formar un HTML 5.0 válido
+
+### Parámetros del componente
+
+El componente hijo recibe el producto, el índice y si es el producto seleccionado (`indiceActual`), que sale de la propiedad `index` del `for-each`. Todas esas propiedades se pasan mediante la definición
 
 **prop-xxx**: donde `prop` indica que es una propiedad que se pasa del padre al hijo, y xxx es el nombre de la propiedad que se define en el hijo, que debe existir (de lo contrario te aparecerá una página de error)
 
