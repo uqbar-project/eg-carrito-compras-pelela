@@ -1,5 +1,5 @@
 <component view-model="ProductoRow">
-  <div class="container" bind-class="claseSeleccion">
+  <div class="container" bind-class="claseSeleccion" click="irADetalle">
     <div class="imagen">
       <img bind-src="producto.imagen" bind-alt="producto.descripcion" />
     </div>

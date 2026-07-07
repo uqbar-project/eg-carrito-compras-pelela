@@ -1,0 +1,28 @@
+<pelela view-model="Detail">
+  <button class="btn-volver secondary" click="volver"><span class="icono-flecha">❮</span> Volver al listado</button>
+  <div class="card detail-card">
+    <div class="imagen">
+      <img class="oferta" if="producto.esOferta" src="/descuento.png" alt="Producto en descuento" title="Este producto está en descuento">
+      <img class="imagen-producto" bind-src="producto.imagen" bind-alt="producto.descripcion">
+    </div>
+    <div class="detalle-info">
+      <h2 class="title" bind-content="producto.descripcion"></h2>
+      <p class="precio-destacado" bind-content="producto.precioFormateado"></p>
+      <hr/>
+      <div class="especificaciones">
+        <div class="row">
+          <span class="encabezado">Calificación:</span>
+          <span class="estrellas" bind-content="estrellas"></span>
+        </div>
+        <div class="row">
+          <span class="encabezado">Fecha de entrega:</span>
+          <span bind-content="producto.fechaEntregaFormateada"></span>
+        </div>
+        <div class="row">
+          <span class="encabezado">Cantidad disponible:</span>
+          <span bind-content="producto.cantidadDisponible"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</pelela>

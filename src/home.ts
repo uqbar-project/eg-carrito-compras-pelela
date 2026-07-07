@@ -1,4 +1,4 @@
-import { productos } from './productos'
+import { productoRepository } from './repositories/productoRepository'
 
 export class Home {
   indice = 1
@@ -9,6 +9,6 @@ export class Home {
   }
 
   get productos() {
-    return productos
+    return productoRepository.getAll()
   }
 }

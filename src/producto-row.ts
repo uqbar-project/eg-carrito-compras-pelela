@@ -1,11 +1,5 @@
-import { format } from 'date-fns'
-import type { Producto } from './productos'
-
-const showCurrency = (value: number) =>
-  Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-  }).format(value)
+import { router } from 'pelelajs'
+import type { Producto } from './domain/producto'
 
 export class ProductoRow {
   producto!: Producto
@@ -13,11 +7,11 @@ export class ProductoRow {
   indice!: number
 
   get entrega() {
-    return `Llega el ${format(this.producto.fechaEntrega(), 'dd/MM/yyyy')}`
+    return `Llega el ${this.producto.fechaEntregaFormateada}`
   }
 
   get precio() {
-    return showCurrency(this.producto.valor)
+    return this.producto.precioFormateado
   }
 
   get seleccionado() {
@@ -26,5 +20,9 @@ export class ProductoRow {
 
   get claseSeleccion() {
     return this.seleccionado ? 'elegido' : 'normal'
+  }
+
+  irADetalle({ producto }: { producto: Producto }) {
+    router.navigateTo(`/producto/${producto.id}`)
   }
 }

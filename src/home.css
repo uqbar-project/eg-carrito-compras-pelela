@@ -17,6 +17,10 @@
   flex-wrap: wrap;
 }
 
+.container:hover {
+  cursor: pointer;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
