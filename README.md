@@ -115,3 +115,53 @@ Definimos entonces:
 
 ![reactividad hijo a padre](./images/reactividad-hijo-padre.png)
 
+## Navegación hacia la vista de detalle
+
+Al hacer click sobre una fila, queremos navegar hacia una vista especial de detalle con más información de un producto. Para eso, asociamos al div un nuevo evento `click` en el archivo `producto-row.pelela`:
+
+```html
+<div class="container" bind-class="claseSeleccion" click="irADetalle">
+```
+
+El método irADetalle dispara la navegación al producto:
+
+```ts
+  irADetalle() {
+    router.navigateTo(`/producto/${this.producto.id}`)
+  }
+```
+
+Navegaremos entonces a la ruta `/producto/3` donde `3` es el identificador del producto.
+
+## Routing en Pelela
+
+El archivo `routes.ts` nos permite definir un mapa de rutas -> componentes Pelela:
+
+```ts
+export const routes: RouteDefinition[] = [
+  { path: '/', component: Home },
+  { path: '/producto/:id', component: Detail },
+  { path: '*', component: Home },
+]
+```
+
+- por defecto, la URL raíz (`/`) se asocia al componente Home (recordamos que un componente es una tríada `.pelela`, `.ts` y opcionalmente un `.css`)
+- `/producto/:id` define una ruta con una parte fija: `producto` y otra dinámica, que se asocia a un parámetro `id`
+- cualquier otra ruta: (*) nos lleva al Home. Si por error escribimos `http://localhost:5173/cualquiera` el router de Pelela nos dirigirá hacia la página home. Esta ruta se suele llamar wildcard o catch-all route en otras tecnologías
+
+## Vista de detalle
+
+El view model provee un método `initialize` para disparar eventos especiales. En este caso, capturamos el valor del parámetro como `id` para buscar en el repositorio la información de un producto (recordemos que podemos solo pasar un mapa de strings de una ruta a otra, no objetos)
+
+```ts
+  initialize() {
+    const { id } = router.urlParameters()
+    const producto = productoRepository.getById(Number(id))
+    if (!producto) {
+      throw new Error(`Producto con id ${id} no encontrado`)
+    }
+    this.producto = producto
+  }
+```
+
+El repositorio es un _singleton_ que permite recuperar la información de todos los productos del carrito.

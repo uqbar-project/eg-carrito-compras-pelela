@@ -22,7 +22,7 @@ export class ProductoRow {
     return this.seleccionado ? 'elegido' : 'normal'
   }
 
-  irADetalle({ producto }: { producto: Producto }) {
-    router.navigateTo(`/producto/${producto.id}`)
+  irADetalle() {
+    router.navigateTo(`/producto/${this.producto.id}`)
   }
 }
