@@ -1,3 +1,4 @@
+import type { Producto } from './domain/producto'
 import { productoRepository } from './repositories/productoRepository'
 
 export class Home {
@@ -8,7 +9,7 @@ export class Home {
     return this.productos.length
   }
 
-  get productos() {
+  get productos(): Producto[] {
     return productoRepository.getAll()
   }
 }
